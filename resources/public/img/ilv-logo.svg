@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="svg4" viewBox="-10 -80 110 95" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs8">
+    <filter style="color-interpolation-filters:sRGB;" id="filter5898" x="-0.23525999" y="-0.22828188" width="1.5510885" height="1.5347424">
+      <feGaussianBlur result="result0" in="SourceAlpha" stdDeviation="4" id="feGaussianBlur5892"/>
+      <feOffset dx="5" dy="5" result="result4" id="feOffset5894"/>
+      <feComposite in="SourceGraphic" in2="result4" operator="xor" result="result3" id="feComposite5896"/>
+    </filter>
+  </defs>
+  <path id="path3822" style="stroke-linejoin:round;stroke-linecap:round;paint-order:fill;stroke-width:10px;stroke:#ffffff;fill:none;stroke-opacity:1;filter:url(#filter5898)" transform="translate(-3.59215,-106.29635)" d="m 17.234,50.935 c 12.917,-13.425 48.738,-13.319 61.628,0 M 48.208,104.713 C 48.276,88.644 32.564,68.724 17.158,69.156 m 31.01,35.706 C 48.1,88.792 63.813,68.873 79.217,69.305 M 48.038,104.467 47.95,41.985"/>
+</svg>
