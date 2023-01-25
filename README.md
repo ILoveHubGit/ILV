@@ -47,6 +47,12 @@ Then open your browser and goto http://localhost:port. Configure your network se
 
 ## Releases
 
+### Version 0.4.1
+- Added functionality to the GUI to add links based on unused interfaces
+- Increased the line thickness for better visibility
+- Changed log configuration so old logfile are automaticaly compressed
+- Improved layout of the GUI and PDF report
+
 ### Version 0.4.0
 **REMARK**: This version is not compatible with the previous version
 - Renamed application to Integrated Landscape Visualization
