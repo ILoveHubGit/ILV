@@ -47,6 +47,9 @@ Then open your browser and goto http://localhost:port. Configure your network se
 
 ## Releases
 
+### Version 0.4.2
+- Added MySQL (MariaDB) as database option
+
 ### Version 0.4.1
 - Added functionality to the GUI to add links based on unused interfaces
 - Increased the line thickness for better visibility
