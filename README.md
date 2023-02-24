@@ -1,4 +1,4 @@
-# Integrated Landscape Visualization
+# Integrated Landscape Visualization (Version 0.4.2)
 <img src="resources/public/img/ilv-logo.svg" width="20%" align="left"/>
 
 Are you tired of trying to understand the complex web of connections between the various systems in your organization? Do you struggle to keep track of how each system fits into the bigger picture?
