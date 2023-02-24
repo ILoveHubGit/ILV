@@ -53,6 +53,7 @@ Then open your browser and goto http://localhost:port and you should see the app
 - Added database support for MS-SQL
 - Added database support for MariaDB
 - Some small bug fixes
+
 ### Version 0.4.1
 - Added functionality to the GUI to add links based on unused interfaces
 - Increased the line thickness for better visibility
