@@ -27,15 +27,17 @@ Have Java version 11 or above installed
 Request a zip-file via [my LinkedIn account][1]
  - Unzip the file in any folder
  - Open the file config.edn
-   - You can now change the port number or leave it at 3010
+   - You can now change the port number or leave it at 3000
    - Choose what kind of database you want to use and remove the ;; before these lines and configure the line with the name and server
      - Make sure that you do this for both lines starting with :database-url and :migration-dir belonging to one database format
 
-Currently two databases are supported:
+Currently three databases are supported:
  - H2 (database is created if it does not exist)
  - MS-SQL (Database needs to be created before running migration command)
+ - MariaDB (Database needs to be created before running migration command)
 
-If you run this application for the first time you need to run this command before you can start to create the necessary database tables.
+
+If you run this application for the first time you need to run the following command to create the database structure:
 
     java -Dconf=config.edn -jar ilv.jar migrate
 
@@ -43,10 +45,14 @@ After this the application can be started with the following command:
 
     java -Dconf=config.edn -jar ilv.jar
 
-Then open your browser and goto http://localhost:port. Configure your network settings so that the server you installed this tool can be reach via HTTP with the port number you configured.
+Then open your browser and goto http://localhost:port and you should see the application. Configure your network settings in such a way that the server you installed this tool on can be reach via HTTP with the port number you configured. Open necessary ports in your firewall and make sure that the server is reachable from the outside by using a DNS name.
 
 ## Releases
 
+### Version 0.4.2
+- Added database support for MS-SQL
+- Added database support for MariaDB
+- Some small bug fixes
 ### Version 0.4.1
 - Added functionality to the GUI to add links based on unused interfaces
 - Increased the line thickness for better visibility
@@ -109,6 +115,6 @@ Copyright © 2021 ILoveHubGit
 [2]: http://jeroenverschuuren.nl/about-ilv.html "My homepage"
 [3]: http://ilv.jeroenverschuuren.nl/ "ILV"
 
-[screen-graph]: /resources/public/img/ilv-graph-0.4.0.png "GUI Impression"
-[screen-swagger]: /resources/public/img/ilv-swagger-0.4.0.png "Swagger view"
-[VT-image]: /resources/public/img/ilv-logo.svg "Logo"
+[screen-graph]: resources/public/img/ILV_animated.gif "GUI Impression"
+[screen-swagger]: resources/public/img/ilv-swagger-0.4.0.png "Swagger view"
+[VT-image]: resources/public/img/ilv-logo.svg "Logo"
