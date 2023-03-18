@@ -49,6 +49,9 @@ Then open your browser and goto http://localhost:port and you should see the app
 
 ## Releases
 
+### Version 0.4.3
+- It's now possible to remove a link through the GUI
+- The description that is shown on hover in the GUI is now multiline
 ### Version 0.4.2
 - Added database support for MS-SQL
 - Added database support for MariaDB
