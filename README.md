@@ -56,6 +56,7 @@ Then open your browser and goto <http://localhost:port> and you should see the a
 
 - Bug fixed where the GUI would not show the correct information when a date was used
 - Code enhancements and cleanup
+- Swagger page enhancements
 
 ### Version 0.4.3
 
