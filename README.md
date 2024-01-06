@@ -1,4 +1,4 @@
-# Integrated Landscape Visualization (Version 0.4.7)
+# Integrated Landscape Visualization (Version 0.4.8)
 
 <img src="resources/public/img/ilv-logo.svg" width="20%" align="left"/>
 
