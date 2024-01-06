@@ -26,31 +26,36 @@ Have Java version 11 or above installed
 
 ## Running
 
-Request a zip-file via [my LinkedIn account][1]
+Request a docker-file via [my LinkedIn account][1]
+To start the application using docker you need to pass the information about the database you want to use with these variables:
+DB_TYPE use "sqlserver" for MS-SQL or "mysql" for MariaDB or MySQL
+DB_ACCESS_STRING give here the complete access string for you database without the first part e.g. "jdbc:sqlserver:"
+Example string for an MS-SQL connection: "/\/DBSERVER_IP;databaseName=ILV;user=UserName;password=MySecret". Replace DBSERVER_IP with the Ip-Address of youer database server, UserName and MySecret with the actual credentials of the user that can access the database.
 
-- Unzip the file in any folder
-- Open the file config.edn
-  - You can now change the port number or leave it at 3000
-  - Choose what kind of database you want to use and remove the ;; before these lines and configure the line with the name and server
-    - Make sure that you do this for both lines starting with :database-url and :migration-dir belonging to one database format
+Currently two databases are supported:
 
-Currently three databases are supported:
+- MS-SQL
+- MariaDB
 
-- H2 (database is created if it does not exist)
-- MS-SQL (Database needs to be created before running migration command)
-- MariaDB (Database needs to be created before running migration command)
+Before you can run the application, you need to create a database. To do this create a database and run the first command shown below.
 
-If you run this application for the first time you need to run the following command to create the database structure:
+If you run this application for the first time, or a database upgrade is needed, you need to run the following docker command:
 
-    java -Dconf=config.edn -jar ilv.jar migrate
+    docker run -p 3000:3000 --env DB_TYPE="YourDBType" --env DB_ACCESS_STRING="YourConnectionString" ilv:0.4.8 migrate
 
-After this the application can be started with the following command:
+After this the application can be started with the following docker command:
 
-    java -Dconf=config.edn -jar ilv.jar
+    docker run -p 3000:3000 --env DB_TYPE="YourDBType" --env DB_ACCESS_STRING="YourConnectionString" ilv:0.4.8 --server.address=0.0.0.0 --server.port=3000
 
 Then open your browser and goto <http://localhost:port> and you should see the application. Configure your network settings in such a way that the server you installed this tool on can be reach via HTTP with the port number you configured. Open necessary ports in your firewall and make sure that the server is reachable from the outside by using a DNS name.
 
 ## Releases
+
+### Version 0.4.8
+
+- Added an new graphical representation as a directional flow
+- Application will from now on be distributed as a docker file
+- You can now delete a link from the Table view
 
 ### Version 0.4.7
 
