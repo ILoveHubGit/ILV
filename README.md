@@ -45,7 +45,12 @@ If you run this application for the first time, or a database upgrade is needed,
 
 After this the application can be started with the following docker command:
 
-    docker run -p 3000:3000 --env DB_TYPE="YourDBType" --env DB_ACCESS_STRING="YourConnectionString" ilv:0.4.8 --server.address=0.0.0.0 --server.port=3000
+    docker run -p 3000:3000 --env DB_TYPE="YourDBType" --env DB_ACCESS_STRING="YourConnectionString" -v /path/on/host:/app/log ilv:0.4.8
+Where:
+
+- YourDBType is either sqlserver or mysql
+- YourConnectionString is the connection for your database without the first part "jdbc:sqlserver:" or "jdbc:mysql:"
+- /path/on/host is the location where you want to store the logfiles of the application
 
 Then open your browser and goto <http://localhost:port> and you should see the application. Configure your network settings in such a way that the server you installed this tool on can be reach via HTTP with the port number you configured. Open necessary ports in your firewall and make sure that the server is reachable from the outside by using a DNS name.
 
