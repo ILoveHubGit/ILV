@@ -1,4 +1,4 @@
-# Integrated Landscape Visualization (Version 0.4.8)
+# Integrated Landscape Visualization (Version 0.5.0)
 
 <img src="resources/public/img/ilv-logo.svg" width="20%" align="left"/>
 
@@ -55,6 +55,12 @@ Where:
 Then open your browser and goto <http://localhost:port> and you should see the application. Configure your network settings in such a way that the server you installed this tool on can be reach via HTTP with the port number you configured. Open necessary ports in your firewall and make sure that the server is reachable from the outside by using a DNS name.
 
 ## Releases
+
+### Version 0.5.0
+
+- Improved layout
+- Aligned colors for Graph and Flow
+- Added a legend for the graphical representations
 
 ### Version 0.4.8
 
